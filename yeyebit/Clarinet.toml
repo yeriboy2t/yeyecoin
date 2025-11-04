@@ -20,3 +20,12 @@ check_checker = { trusted_sender = false, trusted_caller = false, callee_filter 
 # warning, if it gets checked inside. This check will also propagate up to the
 # caller.
 # More informations: https://www.hiro.so/blog/new-safety-checks-in-clarinet
+
+[contracts."trait-sip010"]
+path = "contracts/trait-sip010.clar"
+epoch = "latest"
+
+[contracts.yeyebit]
+path = "contracts/yeyebit.clar"
+depends_on = ["trait-sip010"]
+epoch = "latest"
